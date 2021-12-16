@@ -1,0 +1,25 @@
+html
+    head
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css")
+    body
+        .container.mt-4
+            h1 Vista de productos
+            if products
+                table.table
+                    thead
+                        tr
+                            th(scope='col') #
+                            th(scope='col') Nombre
+                            th(scope='col') precio
+                            th(scope='col') Fotos
+                    tbody
+                        each item in products
+                            tr
+                                th(scope='row')=item.id
+                                td=item.title
+                                td=item.price
+                                td
+                                    img(src=item.thumbnail, width=50)
+            else 
+                .alert.alert-warning(role='alert') No se encontraron productos
+            a.btn.btn-link(href="/") Ir al formulario

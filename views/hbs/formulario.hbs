@@ -1,0 +1,19 @@
+<div class="container mt-4">
+    <h1>Ingrese Producto</h1>
+    <form method="post" action="/api/productos">
+        <div class="mb-3">
+            <label for="title" class="form-label">Nombre del producto</label>
+            <input type="text" class="form-control" name="title" id="title" />
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Precio del producto</label>
+            <input type="text" class="form-control" name="price" id="price" />
+        </div>
+        <div class="mb-3">
+            <label for="thumbnail" class="form-label">Foto del producto</label>
+            <input type="text" class="form-control" name="thumbnail" id="thumbnail" />
+        </div>
+        <input type="submit" class="btn btn-success" value="Enviar" />
+    </form>
+    <a href="/api/productos" class="btn btn-link">Ir a Productos</a>
+</div>
